@@ -15,7 +15,6 @@ APawnBase::APawnBase()
 void APawnBase::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -29,6 +28,5 @@ void APawnBase::Tick(float DeltaTime)
 void APawnBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 

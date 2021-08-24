@@ -24,5 +24,13 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+private:
+
+	UStaticMeshComponent* StaticMesh = nullptr;
+	class USpringArmComponent* CameraArmComponent = nullptr;
+	UInputComponent* InputComponent = nullptr;
+
+	void SetupInputComponent();
+	void RotateCameraCW();
+	void RotateCameraCCW();
 };

@@ -24,5 +24,25 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+private:
+	UPROPERTY(EditAnywhere, Category = "Force")
+	float ForceApplied = 70.f;
+	
+	UPROPERTY(EditAnywhere, Category = "Speed")
+	float MaxSpeed = 900.f;
+
+	UPROPERTY(EditAnywhere, Category = "Force")
+	float StoppingMultiplier = 1.75f;
+
+	FVector BallVelocityComponents;
+
+	UStaticMeshComponent* StaticMeshComponent = nullptr;
+	UInputComponent* InputComponent = nullptr;
+	class USpringArmComponent* CameraArmComponent = nullptr;
+
+	void MoveForward(float Value);
+	void MoveRight(float Value);
+	void SetupInputComponent();
+
 		
 };
